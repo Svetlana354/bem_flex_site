@@ -39,9 +39,10 @@ $breakpoint-large: 60em; // 960px
   }
 
   @media only screen and (min-width: $breakpoint-large) {
-   max-width: 1200px;
-   }
+    max-width: 1200px;
+  }
 }
+
 .d-flex {
   display: flex;
 }
