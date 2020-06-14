@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;700&display=swap');
+
 /* universal START */
 * {
   box-sizing: border-box;
@@ -30,7 +31,9 @@ img {
 }
 
 /* universal END */
+
 /* info-block START */
+
 .info-block__title {
   margin-bottom: 20px;
   text-align: center;
@@ -51,6 +54,7 @@ img {
 .info-block__cta {
   @include uppercase();
   font-size: 0.7rem;
+  margin-top: 2rem;
 
   a {
     border-bottom: 2px solid $brand-color;
@@ -60,6 +64,7 @@ img {
 .info-block__body {
   p {
     font-size: 0.8rem;
+    line-height: 1.4rem;
   }
 }
 
@@ -93,6 +98,7 @@ img {
 
 /* site END */
 
+
 /* quote START */
 .quote {
   text-align: center;
@@ -121,8 +127,8 @@ img {
 }
 
 /* quote END */
-/*showcase START*/
 
+/* showcase START */
 .showcase {
   margin-bottom: 50px;
   width: 50%;
@@ -137,24 +143,208 @@ img {
   margin-left: -15%;
 }
 
-/*showcase END*/
+/* showcase END */
+.col-3 {
+  position: relative;
+}
+
+.shop {
+  margin-top: 50px;
+  &__heading {
+    font-size: 2rem;
+  }
+}
+
+.shop-card {
+  position: absolute;
+  left: 14.3rem;
+  top: 18rem;
+  width: 200px;
+
+  .shop-card__title {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+  }
+
+  .shop-card__name {
+    font-family: $headings;
+    font-size: 1.8rem;
+    color: $heading-color;
+  }
+}
+
+.shop-card__price {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.text-red {
+  color: red;
+}
+
+.text-buy {
+  @include uppercase();
+  font-size: 0.9rem;
+  text-align: left;
+  padding-left: 4.8rem;
+}
+
+.showMore {
+  @include uppercase();
+  font-size: 0.7rem;
+  margin-top: 50px;
+
+  a {
+    border-bottom: 2px solid $brand-color;
+  }
+}
+
+.arrowLeft {
+  position: absolute;
+  left: 0;
+  top: 22rem;
+}
+
+.arrowRigth {
+  position: absolute;
+  right: 0;
+  top: 22rem;
+}
+
+.training {
+  margin-top: 100px;
+}
+
+.info-block__heading {
+  font-size: 2rem;
+  margin-top: 8rem;
+}
+
+hr {
+  border: 1.5px solid $brand-color;
+  size: 2rem;
+  width: 1.2rem;
+  margin: 0.9rem 0 3rem 0;
+}
+
+.point-break {
+  margin-top: 100px;
+
+  &::after {
+    content: "";
+    display: block;
+    background-color: $brand-color;
+    width: 2px;
+    height: 100px;
+    margin: 50px auto 0;
+  }
+}
+
+.login {
+  margin-top: 35px;
+
+  &__heading {
+    margin-bottom: 25px;
+    font-size: 2rem;
+  }
+
+  &__mail {
+    @include uppercase();
+    font-size: 0.7rem;
+    margin-left: 5rem;
+    align-self: center;
+  }
+
+  &__img {
+    width: 2.5rem;
+    margin-right: 5rem;
+  }
+}
+
+.mail {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  margin-bottom: 50px;
+}
+
+.contact {
+  margin-top: 100px;
+
+  &__camp {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+    margin-top: 50px;
+  }
+  &__adress {
+    padding: 50px;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  }
+
+.contact__uppercase {
+  @include uppercase();
+  color: $brand-color;
+}
+
+.footer {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  &__logo {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  &__nav {
+    text-align: center;
+  }
+}
+
+.footer__nav {
+  @include uppercase();
+  font-size: 0.7em;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin: 0 20px;
+  }
+
+  a {
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 400px) {
   .showcase__body {
     width: 70%;
     margin: 30px 0 0 20px;
   }
-}
+  .arrowLeft, .arrowRigth {
+    display: none;
+  }
+ }
 
 @media screen and (min-width: 720px) {
   .info-block__title {
     text-align: left;
   }
+
   .info-block__title--bigger {
     h1, h2, h3, h4, h5, h6 {
       font-size: 3rem;
     }
   }
+
   .info-block__title--fancy {
     &::after {
       content: "";
@@ -164,19 +354,23 @@ img {
       display: inline-block;
     }
   }
+
   .site-nav, .site-logo {
     text-align: left;
   }
+
   .hero {
     position: relative;
     margin-bottom: 150px;
   }
+
   .hero__text {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 45%;
   }
+
   .hero__img {
     text-align: right;
 
@@ -184,6 +378,7 @@ img {
       width: 85%;
     }
   }
+
   .quote {
     width: 50%;
   }
